@@ -15,6 +15,7 @@ body {
   -webkit-animation: gradient 15s ease infinite;
           animation: gradient 15s ease infinite;
   height: 100vh;
+  
 }
 
 @-webkit-keyframes gradient {
@@ -54,7 +55,8 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  
+  font-family: 'Estedad', sans-serif;
+font-weight: 200;
 }
 .input {
   background-color: #f4f5ff;
@@ -66,7 +68,6 @@ body {
   height: 25px;
   align-items: center;
   align-content: center;
-
   outline: 0;
   padding: 4px 20px 0;
   width: 300px;
@@ -79,8 +80,17 @@ body {
   text-align: center;
 }
 
+.verticalOut {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .vertical{
-  display:grid;
-  grid-template-rows: auto auto;
+  display: flex;
+  flex-direction: column;
+}
+#firstTag{
+font-family: 'Estedad', sans-serif;
+font-weight: 300;
 }
 /*# sourceMappingURL=FP.css.map */
