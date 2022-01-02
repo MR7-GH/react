@@ -1,0 +1,86 @@
+#firstTag {
+  text-align: center;
+}
+
+.underLine {
+  height: 3px;
+  width: 50%;
+  margin: auto;
+  background-color: aqua;
+}
+
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e,  #23d5ab,#23a6d5);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.formOutLine {
+  border-radius: 25px;
+  background-color: #ffffff9f;
+  padding: 20px;
+  width: 50%;
+  height: 450px;
+  margin: auto;
+  margin-top: 30px;
+}
+.form-group{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  
+}
+.input {
+  background-color: #f4f5ff;
+  border-radius: 3px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 25px;
+  align-items: center;
+  align-content: center;
+
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 300px;
+
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-size: 15px;
+  line-height: 3;
+  color: rgba(0, 248, 236, 0.637);
+  text-align: center;
+}
+
+.vertical{
+  display:grid;
+  grid-template-rows: auto auto;
+}
+/*# sourceMappingURL=FP.css.map */
