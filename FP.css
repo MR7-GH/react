@@ -79,6 +79,20 @@ form{
   width: 300px;
 }
 
+.small-input{
+  background-color: #f4f5ff;
+  border-radius: 3px;
+  border: 0;
+  box-sizing: border-box;
+  color: black;
+  font-size: 18px;
+  height: 35px;
+  align-items: center;
+  align-content: center;
+  padding: 4px 20px 0;
+  width: 90px;
+}
+
 input:focus{
   outline: rgb(43, 214, 226) solid;
 }
@@ -133,6 +147,8 @@ font-weight: 300;
   display: flex;
   flex-direction: row;
   justify-content:  right;
+  width: 100%;
+  align-items: center;
   gap: 2px;
   border: 5px black;
 }
@@ -169,7 +185,6 @@ font-weight: 300;
   position: relative;
 }
 .space-bet{
-  margin-top: 10px;
   justify-content: space-evenly;
   direction: ltr;
 }
