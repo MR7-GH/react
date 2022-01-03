@@ -1,5 +1,6 @@
 #firstTag {
   text-align: center;
+  margin-top: 10px;
 }
 
 .underLine {
@@ -20,6 +21,7 @@ body {
 form{
   display: block;
   height: 100%;
+
 }
 @-webkit-keyframes gradient {
   0% {
@@ -68,25 +70,27 @@ form{
   border-radius: 3px;
   border: 0;
   box-sizing: border-box;
-  color: #eee;
+  color: black;
   font-size: 18px;
-  height: 25px;
+  height: 35px;
   align-items: center;
   align-content: center;
-  outline: 0;
   padding: 4px 20px 0;
   width: 300px;
+}
 
+input:focus{
+  outline: rgb(43, 214, 226) solid;
 }
 ::-moz-placeholder { /* Firefox 19+ */
   font-size: 15px;
   line-height: 3;
-  color: rgba(0, 248, 236, 0.637);
+  color: rgba(92, 92, 92, 0.637);
   text-align: center;
 }
 
 .verticalOut {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: top;
   gap: 20px;
@@ -100,6 +104,11 @@ font-family: 'Estedad', sans-serif;
 font-weight: 300;
 }
 
+.btn{
+  font-family: 'Estedad', sans-serif;
+  font-weight: 300;
+}
+
 .title {
   color: #eee;
   font-family: sans-serif;
@@ -108,4 +117,60 @@ font-weight: 300;
   margin-top: 30px;
 }
 
+.end-page{
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.rectangle{
+  width: 80px;
+  height: 7px;
+  border-radius: 5px;
+}
+.horizental{
+  display: flex;
+  flex-direction: row;
+  justify-content:  right;
+  gap: 2px;
+  border: 5px black;
+}
+.AnswerBox{
+  width: 60px;
+  height: 40px;
+  border: 2px #004857 solid;
+  background-color: #f4f5ff;
+  border-radius: 5px;
+}
+
+.BMILabel{
+  font-size: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.progress {
+  display: flex;
+  width: 50%;
+  height: 10px;
+  overflow: hidden;
+  flex-direction: row;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 1px;
+}
+
+.progress .fill {
+  display: block;
+  background-color: #0dcaf0;
+  height: 100%;
+  width: 50%;
+  content: '  ';
+  border-radius: 5px;
+  position: relative;
+}
+.space-bet{
+  margin-top: 10px;
+  justify-content: space-evenly;
+  direction: ltr;
+}
 /*# sourceMappingURL=FP.css.map */
