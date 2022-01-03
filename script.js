@@ -1,6 +1,12 @@
 document.getElementsByTagName("h1")[0].style.fontSize = "3vw";
 
 
+window.onload = () => {
+    let button = document.querySelector(".btn");
+
+    // Function for calculating BMI
+    button.addEventListener("click", myFunction());
+};
 
 function myFunction() {
     console.log(1);
