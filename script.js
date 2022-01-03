@@ -9,8 +9,6 @@ window.onload = () => {
 };
 
 function myFunction() {
-    console.log(1);
-
     let height = parseInt(document
         .querySelector("#qad").value);
 
