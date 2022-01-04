@@ -1,29 +1,23 @@
 document.getElementsByTagName("h1")[0].style.fontSize = "3vw";
-function checkShowBox(checkbox,box){
-    if(checkbox.checked){
-        if(box.classList.contains("display-none"))
-            box.classList.remove("display-none");                
-    } else {
-        if(!box.classList.contains("display-none"))
-            box.classList.add("display-none"); 
-    }
-}
 window.onload = () => {
-    var video = document.getElementById("myVideo");
-    function myFunction() {
-    if (video.paused) {
-        video.play();
-    }
-    }
     let height = document.querySelector("#qad");
     let weight = document.querySelector("#vazn");
     let sigar = document.querySelector("#sigar");
     let qelyoon = document.querySelector("#qelyoon");
+    weight.addEventListener("change",() =>myFunction());
+    height.addEventListener("change",() =>myFunction()); 
     qelyoon.addEventListener("click",() =>checkShowBox(qelyoon,document.querySelector("#qelyoon-num")));
     sigar.addEventListener("click",() => checkShowBox(sigar,document.querySelector("#sigar-num")));
-    weight.addEventListener("change",myFunction);
-    height.addEventListener("change",myFunction); 
     let nextButton = document.querySelector("#nextPageButton");
+    function checkShowBox(checkbox,box){
+        if(checkbox.checked){
+            if(box.classList.contains("display-none"))
+                box.classList.remove("display-none");                
+        } else {
+            if(!box.classList.contains("display-none"))
+                box.classList.add("display-none"); 
+        }
+    }
     nextButton.addEventListener("click",() => {
         if(checkFeilds()){
             let form1 = document.querySelector("#page1");
@@ -114,7 +108,6 @@ function myFunction() {
         .querySelector("#vazn").value);
 
     let result = document.querySelector(".AnswerBox");
-
     if (height === "" || isNaN(height))
         result.innerHTML = "";
 

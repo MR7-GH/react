@@ -11,12 +11,22 @@
 }
 
 body {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e,  #23d5ab,#23a6d5);
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e,  #23d5ab,#23a6d5); */
+  background: linear-gradient(45deg, rgba(238, 119, 82, 0.5), rgba(231, 60, 126, 0.5), rgba(35, 213, 171, 0.5), rgba(35, 166, 213, 0.5));
   background-size: 400% 400%;
   -webkit-animation: gradient 15s ease infinite;
           animation: gradient 15s ease infinite;
   height: 100vh;
 }
+
+#myVideo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1000;
+  filter: blur(10px);
+}
+
 form{
   font-family: 'Estedad', sans-serif;
   font-weight: 200;
