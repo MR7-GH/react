@@ -18,8 +18,12 @@
             "http://mobinghorbani.ir/icon/insurance.png" 
                     type = "image/x-icon">
             <title>Mobin Insurance</title>
+            
     </head>
     <body style="direction : rtl;">
+        <!-- <video autoplay muted loop id="myVideo">
+            <source src="HappyFam.mkv" type="video/mkv">
+          </video> -->
         <div class="Title">
             <h1 id="firstTag">
                 صدور بیمه نامه عمر
@@ -29,25 +33,80 @@
             </div>
         </div>
         <div class="formOutLine">
-                <form>
+                <form action="POST" id="page2" class="display-none">
+                    <div>
+                        در صورت مصرف هر یک از گزینه های زیر، انتخابشان کنید.
+                    </div>
+                    <div class="horizental" style="gap: 40px;">
+                        <div class="vertical" style="min-width: 300px;">
+                            <div class="vertical">
+                                <div class="checkbox" style="margin-top: 10px;">
+                                    <label><input type="checkbox"  id = "qelyoon">      قلیان</label>
+                                </div>
+                                <div style="margin-top: 8px;"  class = "display-none" id = "qelyoon-num"> 
+                                    <div>
+                                        چند بار در روز قلیان می کشید؟
+                                    </div>
+                                    <input type="number" class="input" style="width: 300;">
+                                </div>
+                            </div>
+                            <div class="vertical">
+                                <div class="checkbox"  style="margin-top: 20px;">
+                                    <label><input type="checkbox" id = "sigar">      سیگار</label>
+                                </div>
+                                <div style="margin-top: 8px;" class = "display-none" id = "sigar-num" > 
+                                    <div>
+                                        چند بار در روز سیگار می کشید؟
+                                    </div>
+                                    <input type="number" class="input">
+                                </div>
+                            </div>
+                        </div>
+                         <div class="vertical" style="margin-top: 10px;">
+                                <label>آیا دارای بیماری خاص هستید؟</label>
+                                <textarea style="background-color: #f4f5ff; resize: none; border-radius: 7px;" id="info-patient" cols="30" rows="8" placeholder="لطفا کامل توضیح دهید"></textarea>
+                            </div>
+                    </div>
+                    <div class="end-page" style="margin-top: 42px;">
+                        <button type="submit" class="btn btn-info">ارسال</button>  
+                        <!-- <progress max="100" value="50"></progress> -->
+                        <div class="progress">
+                            <div class="fill"></div>
+                        </div>
+                        <label>مرحله 2 از 2</label>
+                    </div>
+                </form>
+                <form id="page1" class="">
                     <div class="vertical">
                         <div class="form-group">
                             <div class="verticalOut">
                                 <div class="vertical">
-                                    <label>نام</label>
+                                    <div class="horizental" style="gap: 20px;">
+                                        <label>نام</label>
+                                        <label  id = "name-error" class="error display-none">*لطفا این فیلد را کامل و درست پر کنید*</label>
+                                    </div>
                                     <input class="input" type="text" id = "inputName" aria-describedby = "nameHelp" placeholder="نام خود را به صورت کامل وارد کنید" >
                                 </div>
                                 <div class="vertical">
-                                    <label for="inputName">نام خانوادگی</label>
-                                    <input class="input" type="text" id = "inputName" aria-describedby = "nameHelp" placeholder="نام خانوادگی خود را به صورت کامل وارد کنید">    
+                                    <div class="horizental" style="gap: 20px;">
+                                        <label for="inputName">نام خانوادگی</label>
+                                        <label  id = "familyName-error" class="error display-none">*لطفا این فیلد را کامل و درست پر کنید*</label>
+                                    </div>
+                                    <input class="input" type="text" id = "inputFamilyName" aria-describedby = "familyNameHelp" placeholder="نام خانوادگی خود را به صورت کامل وارد کنید">    
                                 </div>
                                 <div class="vertical">
-                                    <label for="InputEmail">ایمیل</label>
-                                    <input class="input" type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="ایمیل را وارد کنید">
+                                    <div class="horizental" style="gap: 20px;">
+                                        <label for="inputEmail">ایمیل</label>
+                                        <label  id = "email-error" class="error display-none">*لطفا این فیلد را کامل و درست پر کنید*</label>
+                                    </div>
+                                    <input class="input" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="ایمیل را وارد کنید">
                                 </div>
                                 <div class="vertical">
-                                    <label>شماره تلفن</label>
-                                    <input class="input" type="text" id = "inputName" aria-describedby = "nameHelp" placeholder="شماره همراه خود را وارد کنید" >
+                                    <div class="horizental" style="gap: 20px;">
+                                        <label>شماره تلفن</label>
+                                        <label  id = "phone-error" class="error display-none">*لطفا این فیلد را کامل و درست پر کنید*</label>
+                                    </div>
+                                    <input class="input" type="text" id = "inputPhone" aria-describedby = "phoneHelp" placeholder="شماره همراه خود را وارد کنید" >
                                 </div>
                                 <!-- <div class="input-container ic1">
                                     <input id="firstname" class="input" type="text" placeholder=" " />
@@ -67,18 +126,27 @@
                             </div>
                             <div class="verticalOut">
                                 <div class="vertical">
-                                    <label>سن</label>
-                                    <input class="input" type="number" id = "inputName" aria-describedby = "nameHelp" placeholder="سن خود را وارد کنید" >
+                                        <div class="horizental" style="gap: 20px;">
+                                            <label>سن</label>
+                                            <label  id = "age-error" class="error display-none" >*لطفا این فیلد را کامل و درست پر کنید*</label>
+                                        </div>
+                                    <input class="input" type="number" id = "sen" aria-describedby = "ageHelp" placeholder="سن خود را وارد کنید" >
                                 </div>
-                                <div class="horizental">
+                                <div class="horizental" style="gap: 10px;">
                                     <div class="vertical">
-                                        <label>قد</label>
-                                        <input class="small-input" type="number" id = "inputName" aria-describedby = "nameHelp" placeholder="قد خود را وارد کنید" >
+                                        <div class="horizental" style="gap: 20px;">
+                                            <label>قد(سانتی متر)</label>
+                                        </div>
+                                        <input class="small-input" type="number" id = "qad" aria-describedby = "heightHelp" placeholder="قد خود را وارد کنید" >
                                     </div>
                                     <div class="vertical">
-                                        <label>وزن</label>
-                                        <input class="small-input" type="number" id = "inputName" aria-describedby = "nameHelp" placeholder="وزن خود را وارد کنید" >
+                                        <div class="horizental" style="gap: 20px;">
+                                            <label>وزن</label>
+                                        </div>
+                                        <input class="small-input" type="number" id = "vazn" aria-describedby = "weightHelp" placeholder="وزن خود را وارد کنید" >
                                     </div>
+                                    <label id = "bmi-error"  class="error display-none" style="margin-top: 25px;">*لطفا این دو فیلد را پر کنید*</label>
+
                                 </div>
                                 <div class="horizental" style="margin-top: 22px;">
                                     <div class="horizental">
@@ -86,18 +154,24 @@
                                         <div class="AnswerBox"></div>
                                     </div>
                                 </div>
-                                <div class="space-bet" style="margin-top: 20px;">
-                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                                        <option selected>شعبه بیمه را انتخاب کنید</option>
-                                        <option value="1">یک</option>
-                                        <option value="2">دو</option>
-                                        <option value="3">سه</option>
-                                      </select>
+                                <div class="vertical">
+                                    <div class="horizental">
+                                        <label id = "insurance-error" class="error display-none">*لطفا یک شعبه را انتخاب کنید*</label>
+                                    </div>
+                                    <div class="space-bet" style="margin-top: 5px;">
+                                        <select id = "dropdown" class="form-select form-select-sm" aria-label=".form-select-sm example" >
+                                            <option selected value="0">شعبه بیمه را انتخاب کنید</option>
+                                            <option value="1">یک</option>
+                                            <option value="2">دو</option>
+                                            <option value="3">سه</option>
+                                          </select>
+                                    </div>
                                 </div>
+                                
                             </div>
                         </div>
                         <div class="end-page">
-                            <button type="button" class="btn btn-info">صفحه بعد</button>  
+                            <button type="button" id="nextPageButton" class="btn btn-info" >صفحه بعد</button>  
                             <!-- <progress max="100" value="50"></progress> -->
                             <div class="progress">
                                 <div class="fill"></div>
